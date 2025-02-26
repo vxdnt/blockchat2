@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp Clone</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <!-- Chat List (Home Screen) -->
+        <div class="chat-list" id="chatList">
+            <h2>Chats</h2>
+            <ul id="chat-users">
+                <li onclick="openChat('chat1', 'John Doe')">John Doe</li>
+                <li onclick="openChat('chat2', 'Alice Smith')">Alice Smith</li>
+                <li onclick="openChat('chat3', 'David Brown')">David Brown</li>
+            </ul>
+        </div>
+
+        <!-- Chat Window (Hidden Initially) -->
+        <div class="chat-container" id="chatContainer">
+            <!-- Chat Header -->
+            <div class="chat-header">
+                <button class="back-btn" onclick="goBack()">←</button>
+                <h3 id="chat-title">John Doe</h3>
+            </div>
+
+            <!-- Chat Messages -->
+            <div class="chat-box" id="chat-box">
+                <div class="message bot">Hello! How can I help?</div>
+            </div>
+
+            <!-- Chat Input -->
+            <div class="chat-input">
+                <input type="text" id="messageInput" placeholder="Type a message...">
+                <button id="sendButton">➤</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
